@@ -1,0 +1,165 @@
+/* HEADER---------------------------------------------------------------------------------------- */
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+header{
+    position: fixed;
+    background-color:#262626 ;
+    top:0;
+    left:0;
+    width: 100%;
+    height:54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+    z-index: 9999;
+}
+header a{
+    text-decoration: none;
+    text-align: center;
+}
+.buynow{
+    padding:7px 20px;
+    background-color:#7db13a;
+    color: white;
+    border-radius:4px;
+    font-size: 16px;
+}
+.buynow:hover{
+    background-color: #6b9831;
+}
+.envato-logo{
+    display: inline-block;
+    height: 18px;
+    width: 152px;
+   color: white;
+   background: url(image/envato_market-dde916a48af7413e54aa058fe7ae6856752fca799da4bec355f00aea904bfa19.svg);
+}
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* Main----------------------------------------------------------------------------------------- */
+main{
+    /* margin-top:54px; */
+}
+.banner{
+    margin:0;
+    height:820px;
+    width: 100%;
+    background: url(image/banner_bg.jpg);
+}
+.banner-header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    align-items: center;
+    margin:54px auto;
+    padding:30px 50px;
+    position: relative;
+}
+.buynow2{
+    text-transform:uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    padding:20px 50px;
+    border:2px solid blue;
+    border-radius: 50px;;
+}
+.banner-content{
+    color: white;
+    display:block;
+    margin:180px auto;
+    max-width: 1040px;
+}
+.banner-content h2{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.banner-content p{
+    font-size:20px;
+    font-weight: 400px;
+    text-align: center;
+    line-height: 31.5px;
+    max-width:506px;
+    margin: auto
+}
+/* --------------------------------------------------------------------------------------------- */
+
+/* TITLE---------------------------------------------------------------------------------------- */
+.title{
+    background-color:rgb(11, 29, 51) ;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.title section{
+    padding:80px 0;
+    text-align: center;
+    max-width: 600px;
+}
+.title h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.title p{
+    font-size: 20px;
+    color: #a4b4c3;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+/* DEMO----------------------------------------------------------------------------------------- */
+.demo-area{
+    background-color: #030b15;
+
+}
+.demo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    gap:30px;
+}
+.demo-section-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:100px 40px;
+}
+.demo-thumb{
+    overflow: hidden;
+    padding:0px 20px;
+}
+.demo-thumb img{
+    max-width: 100%;
+}
+.demo-thumb  section{
+    padding: 15px 30px;
+    background-color:#00c4f4;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+    transition:transform 0.6s;
+    transform: translateY(51px);
+}
+.demo-thumb a{
+    text-decoration: none;
+    font-size: 14px;
+}
+.demo-title a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size:20px ;
+}
+.demo-thumb:hover section{
+    transform: translateY(-20px);
+    transition-duration: 0.6s;
+}
+/* --------------------------------------------------------------------------------------------- */
