@@ -64,7 +64,9 @@ header a{
     color: white;
     padding:20px 50px;
     border:2px solid blue;
-    border-radius: 50px;;
+    border-radius: 70px;
+    letter-spacing: .5px;
+    background-color: #040e18;
 }
 .banner-content{
     color: white;
@@ -284,5 +286,8 @@ footer{
     }
     .core-feature{
         width:100%
+    }
+    .buynow2{
+        display: none;
     }
 }
