@@ -2,6 +2,8 @@
 *{
     box-sizing: border-box;
     margin:0;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
 }
 header{
     position: fixed;
@@ -40,13 +42,25 @@ header a{
 /* --------------------------------------------------------------------------------------------- */
 
 
-/* Main----------------------------------------------------------------------------------------- */
+/* BANNER----------------------------------------------------------------------------------------- */
 .banner{
     margin:0;
     height:763px;
     width: 100%;
     background: url(image/banner_bg.jpg);
-
+    background-position: 50% 60%;
+    background-size: cover;
+    position: relative;
+}
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(0.23deg, #030B15 5.68%, rgba(3, 11, 21, 0.42) 81.9%);
+    z-index: 0;
 }
 .banner-header{
     display: flex;
@@ -54,39 +68,46 @@ header a{
     max-width: 1500px;
     align-items: center;
     margin:54px auto 0px;
-    padding:30px 50px;
+    padding:30px 70px;
     position: relative;
 }
 .buynow2{
     text-transform:uppercase;
     text-decoration: none;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: white;
-    padding:20px 50px;
-    border:2px solid blue;
+    padding:20px 45px;
+    border:2px solid #21bcf4;
     border-radius: 70px;
     letter-spacing: .5px;
+    font-size: 14px;
+    
     background-color: #040e18;
 }
 .banner-content{
+    position: relative;
     color: white;
     display:block;
     margin:120px auto;
     max-width: 1040px;
-    padding:0 30px
+    z-index: 1;
+    width: 80%;
 }
 .banner-content h2{
-    font-size: 65px;
+    font-size: 55px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 .banner-content p{
-    font-size:20px;
-    font-weight: 400px;
+    font-family: "Outfit", sans-serif;
+    font-size:18px;
     text-align: center;
     line-height: 31.5px;
-    width:60%;
-    margin:0 auto 30px;
+    width:50%;
+    margin:auto;
+    font-weight: 400;
 }
 /* --------------------------------------------------------------------------------------------- */
 
@@ -98,17 +119,25 @@ header a{
     justify-content: center;
 }
 .title section{
-    padding:80px 20px;
+    padding:80px 0;
     text-align: center;
-    max-width: 600px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title h2{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
     font-size: 45px;
     margin-bottom: 20px;
 }
 .title p{
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
     color: #a4b4c3;
+    width: 80%;
 }
 /* --------------------------------------------------------------------------------------------- */
 
@@ -117,7 +146,6 @@ header a{
 
 .demo-area{
     background-color: #030b15;
-
 }
 .demo{
     display: flex;
@@ -150,8 +178,8 @@ header a{
     font-weight: 600;
     letter-spacing: 2px;
     text-transform:uppercase;
-    transition:transform 0.6s;
-    transform: translateY(51px);
+    transition:transform 0.7s;
+    transform: translateY(55px);
 }
 .demo-thumb a{
     text-decoration: none;
@@ -166,7 +194,7 @@ header a{
 }
 .demo-thumb:hover section{
     transform: translateY(-10px);
-    transition-duration: 0.6s;
+    transition-duration: 0.7s;
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -211,24 +239,29 @@ header a{
 
 footer{
     background: url(image/footer_bg.jpg);
-}
+    background-position: 50% 50%;
+     background-size:cover;
+} 
 .footer-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding:150px 20px;
-    gap:30px;
+    gap:25px;
 }
 footer{
     h2{
         text-align: center;
         font-size: 50px;
         color: white;
+        font-weight: 700;
+        
     }
     p{
         color: white;
         font-size: 20px;
         text-align: center;
+        font-family: "Outfit", sans-serif;
     }
     .purchase-button{
         font-size: 15px;
@@ -240,22 +273,30 @@ footer{
         text-decoration: none;
         text-transform: uppercase;
         color: white;
+        font-family: "Outfit", sans-serif;
     }
 }
 /* --------------------------------------------------------------------------------------------- */
-@media screen and (min-width:990px) and (max-width:1180px) {
+@media screen and (max-width:1180px) {
     .demo{
         width: 33.3%;
-    }
-    .banner-content h2{
-        font-size: 60px;
     }
     .banner-content p{
         width: 75%;
     }
-    
+    .title section{
+        width: 90%;
+        p{
+            width: 100%;
+        }
+    }
+    footer{
+        h2{
+            font-size: 45px;
+        }
+    }
 }
-@media screen and (max-width:989px) and (min-width:580px) {
+@media screen and (max-width:989px){
     .demo{
         width: 50%;
     }
@@ -268,26 +309,45 @@ footer{
     .core-feature{
         width:27%
     }
+    .title h2{
+        font-size: 40px;
+    }
 }
 @media screen and (max-width:760px) {
     .core-feature{
         width:46%
+    }
+    .title h2{
+        font-size: 35px;
+    }
+    .banner-content h2{
+        font-size: 42px;
+    }
+    .banner-content p{
+        width: 100%;
     }
 }
 @media screen and (max-width:579px)  {
     .demo{
         width: 100%;
     }
-    .banner-content h2{
-        font-size: 40px;
+    .banner-content {
+        h2{
+            font-size: 40px;
+        }
+        section{
+            width: 100%;
+        }
+
     }
-    .banner-content p{
-        width: 100%;
-    }
+
     .core-feature{
         width:100%
     }
     .buynow2{
         display: none;
+    }
+    .banner{
+        height: 850px;
     }
 }
