@@ -1,3 +1,13 @@
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* HEADER---------------------------------------------------------------------------------------- */
 *{
     box-sizing: border-box;
@@ -48,7 +58,7 @@ header a{
     height:763px;
     width: 100%;
     background: url(image/banner_bg.jpg);
-    background-position: 50% 60%;
+    background-position: 50% 65%;
     background-size: cover;
     position: relative;
 }
@@ -82,8 +92,10 @@ header a{
     border-radius: 70px;
     letter-spacing: .5px;
     font-size: 14px;
-    
     background-color: #040e18;
+}
+.buynow2:hover {
+    color: #00c4f4;
 }
 .banner-content{
     position: relative;
@@ -93,6 +105,10 @@ header a{
     max-width: 1040px;
     z-index: 1;
     width: 80%;
+
+}
+.show{
+    animation: fade-in 0.8s; 
 }
 .banner-content h2{
     font-size: 55px;
@@ -113,7 +129,7 @@ header a{
 
 /* TITLE---------------------------------------------------------------------------------------- */
 .title{
-    background-color:rgb(11, 29, 51) ;
+    background-color:rgb(11, 29, 51);
     color: white;
     display: flex;
     justify-content: center;
@@ -142,19 +158,20 @@ header a{
 /* --------------------------------------------------------------------------------------------- */
 
 /* DEMO----------------------------------------------------------------------------------------- */
-
-
 .demo-area{
     background-color: #030b15;
 }
 .demo{
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 30px;
     width: 25%;
     gap:30px;
 }
+
 .demo-section-inner{
     display: flex;
     flex-wrap: wrap;
@@ -189,18 +206,21 @@ header a{
     text-align: center;
     text-decoration: none;
     color: white;
-    font-size:20px ;
+    font-size:18px ;
     font-weight: 900;
 }
 .demo-thumb:hover section{
     transform: translateY(-10px);
     transition-duration: 0.7s;
 }
+.demo-title a:hover{
+    color:#00c4f4;
+}
 
 /* --------------------------------------------------------------------------------------------- */
 
 /* CORE FEATURE-------------------------------------------------------------------------------- */
-.core-feature-item-wrap{
+.core-feature-area{
     background-color: #030b15
 }
 .core-feature-container{
@@ -276,7 +296,7 @@ footer{
         font-family: "Outfit", sans-serif;
     }
 }
-/* --------------------------------------------------------------------------------------------- */
+/* RESPONSIVE----------------------------------------------------------------------------------- */
 @media screen and (max-width:1180px) {
     .demo{
         width: 33.3%;

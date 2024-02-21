@@ -1,25 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const demos = document.querySelectorAll('.demo');
-    let currentIndex = 0;
+const the_animation = document.querySelectorAll('.title section, .banner-content');
 
-    function showNextDemo() {
-        if (currentIndex < demos.length) {
-            demos[currentIndex].style.opacity = '1';
-            currentIndex++;
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); 
         }
-    }
-
-    function handleScroll() {
-        const demoSection = document.querySelector('.demo-section-inner');
-        const rect = demoSection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (rect.top < windowHeight) {
-            showNextDemo();
-        }
-    }
-
-    demos.forEach(demo => {
-        demo.style.opacity = '0';
     });
-    window.addEventListener('scroll', handleScroll);
+}, { threshold: 0.8 });
+
+the_animation.forEach(element => {
+    observer.observe(element);
 });
