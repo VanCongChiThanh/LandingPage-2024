@@ -357,4 +357,7 @@ footer{
     .banner{
         height: 850px;
     }
+    footer h2{
+        font-size: 35px;
+    }
 }
