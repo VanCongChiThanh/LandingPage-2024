@@ -70,7 +70,7 @@ header a{
 .banner-header{
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: 1330px;
     padding:0 30px;
     align-items: center;
     text-align: center;
@@ -118,7 +118,7 @@ header a{
     display:block;
     margin:0 auto;
     z-index: 1;
-    max-width: 60%;
+    max-width: 1150px;
     padding:30px;
 }
 .banner-content h2{
@@ -311,8 +311,11 @@ footer{
 }
 /* RESPONSIVE----------------------------------------------------------------------------------- */
 @media screen  and (max-width:1500px) {
+    .banner-header{
+        max-width: 1150px;
+    }
     .banner-content {
-        max-width:960px;
+        max-width: 960px;
         h2{
             font-size:55px;
         }
@@ -320,7 +323,6 @@ footer{
             width: 65%;
         }
     }
-    
 }
 @media screen and (max-width:1180px) {
     .banner-header{
